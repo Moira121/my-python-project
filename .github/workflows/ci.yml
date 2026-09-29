@@ -16,4 +16,5 @@ jobs:
           pip install requests==2.28.1 pytest
       - name: 运行测试
         run: |-
-          pytest -v
+          OUTPUT=$(pytest -v)
+          printf "%s" "$OUTPUT"
